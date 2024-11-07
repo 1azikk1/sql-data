@@ -1,24 +1,24 @@
 -- 1 - topshiriq
 
--- DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS users;
 
--- CREATE TABLE IF NOT EXISTS users (
--- 	user_id SERIAL PRIMARY KEY,
--- 	user_name TEXT NOT NULL,
--- 	user_age INTEGER,
--- 	user_address TEXT
--- );
+CREATE TABLE IF NOT EXISTS users (
+	user_id SERIAL PRIMARY KEY,
+	user_name TEXT NOT NULL,
+	user_age INTEGER,
+	user_address TEXT
+);
 
--- SELECT * FROM users;
+SELECT * FROM users;
 
--- INSERT INTO users(user_name, user_age, user_address) VALUES
--- ('Toxir', 17, 'Ferghana'),
--- ('Sobir', 18, 'Tashkent'),
--- ('Ali', 19, 'Andijan'),
--- ('Bakir', 21, 'Ferghana'),
--- ('Jalil', 20, 'Namangan');
+INSERT INTO users(user_name, user_age, user_address) VALUES
+('Toxir', 17, 'Ferghana'),
+('Sobir', 18, 'Tashkent'),
+('Ali', 19, 'Andijan'),
+('Bakir', 21, 'Ferghana'),
+('Jalil', 20, 'Namangan');
 
--- SELECT user_name, age FROM users;
+SELECT user_name, user_age FROM users;
 
 -- ---------------------------------------------------------------------
 
@@ -110,9 +110,20 @@
 
 -- SELECT * FROM delivery_guys;
 
+DROP TABLE IF EXISTS;
 
+CREATE TABLE IF NOT EXISTS cars(
+    car_id SERIAL PRIMARY KEY,
+    car_brand TEXT,
+    car_model TEXT NOT NULL,
+    car_price INTEGER
+);
 
+INSERT INTO cars(car_brand, car_model, car_price) VALUES
+('Mercedes', 'AMG', 200000),
+('BMW', 'M%', 250000),
+('Lamborghini', 'Aventador', 1200000),
+('Bugatti', 'Chiron Super Sport', 3000000),
+('Koeniggsegg', 'Regera', 3500000);
 
-
-
-
+SELECT * FROM cars;
